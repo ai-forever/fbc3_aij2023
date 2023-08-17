@@ -41,9 +41,9 @@
 **Перплексия** в языковой модели — определяется как эскпонента от усредненной функции отрицательного правдоподобия (negative log-likelihood) последовательности токенов.
 Таким образом, если мы имеем некоторую токенизированную последовательность X=(x0,x1,…,xt), тогда значение перплексии для последовательности X вычисляется как:
 
-![image](https://latex.codecogs.com/png.image?\large&space;\dpi{150}&space;PPL(X)=exp^{\frac{1}{t}\sum_{i}^{t}log&space;p_{\theta}(x_{i}|x_{<i})})
+![image](https://latex.codecogs.com/svg.image?\large&space;\dpi{150}&space;PPL(X)=exp^{\frac{1}{t}\sum_{i}^{t}log&space;p_{\theta}(x_{i}|x_{<i})})
 
-где  ![image](https://latex.codecogs.com/png.image?\large&space;\dpi{100}log&space;p_{\theta}(x_{i}|x_{<i}))  это правдоподобие i-ого токена при условии всех x<i токенов, в соотвествии с предсказаниями модели.
+где ![image](https://latex.codecogs.com/svg.image?\large&space;\dpi{150}log&space;p_{\theta}(x_{i}|x_{<i})) - это правдоподобие i-ого токена при условии всех x<i токенов, в соотвествии с предсказаниями модели.
 
 Кроме того, показатель перплексии - это ни что иное как экспонента кросс-энтропийного критерия качества между предсказаниями модели и целевыми ответами.
 
