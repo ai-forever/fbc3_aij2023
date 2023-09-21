@@ -18,6 +18,7 @@
 
 Так же мы специально собрали ряд **[мультимодальных диалоговых наборов данных](#мультимодальные-диалоговые-датасеты)**.
 
+
 | Датасет                        | Текст  📝      | Изображения    🎨 | Аудио 🎼                                                       | Задача(и)                                                          |                                                 Объем |
 |--------------------------------|--------------|-------------------|----------------------------------------------------------------|--------------------------------------------------------------------|------------------------------------------------------:|
 | VQA v2.0              |     ✔️     | ✔️                |                                                                | Visual Question Answering (VQA)                                    |               265 тыс. изображений, 795 тыс. вопросов |
@@ -35,6 +36,7 @@
 | Visual Dialog v1.0             |    ✔️    | ✔️                | | Conversation, Image Captioning, Visual Question Answering (VQA) | 130 тыс. изображений                                               |                                                       
 | CLEVR-Dialog                   |     ✔️   | ✔️        |        | Conversation, Visual Reasoning                                 | 4.25 млн. диалогов                                                 |                                                       
 | Image-Chat                     |   ✔️       | ✔️      |          | Conversation,   Visual Question Answering (VQA)                | 201 тыс. пар изображение-диалог                                    |                                                       
+
 
 ## Бимодальные
 
@@ -95,6 +97,7 @@ Visual Genome - это набор данных для решения задач�
 📄 <a href="https://arxiv.org/pdf/1602.07332v1.pdf" style="color: black; text-decoration: bold;"> Статья </a>    
 🗃️ <a href="https://homes.cs.washington.edu/~ranjay/visualgenome/index.html" style="color: black; text-decoration: bold"> Датасет </a> 
 
+
 #### MiniGPT-4 Instruct Dataset
 ##### Описание
 
@@ -125,7 +128,8 @@ LLaVA Instruct Dataset - это набор мультимодальных виз
 * **Многоступенчатое логическое рассуждение** - требует от мультимодального ассистента продемонстрировать навык логического рассуждения и здравого смысла в рамках диалога с пользователем.
 
 📄 <a href="https://arxiv.org/pdf/2304.08485" style="color: black; text-decoration: bold;"> Статья </a>    
-🗃️ <a href="https://llava-vl.github.io/" style="color: black; text-decoration: bold"> Датасет </a> 
+🗃️ <a href="https://llava-vl.github.io/" style="color: black; text-decoration: bold"> Датасет </a>
+
 
 ### Текстово-аудио датасеты
 
@@ -171,6 +175,7 @@ VGG-Sound - это набор визуально-звуковых данных, 
 
 📄 <a href="https://arxiv.org/pdf/2004.14368v2.pdf" style="color: black; text-decoration: bold;"> Статья </a>    
 🗃️ <a href="https://www.robots.ox.ac.uk/~vgg/data/vggsound/" style="color: black; text-decoration: bold"> Датасет </a> 
+
 
 #### Clotho
 ##### Описание
@@ -237,7 +242,7 @@ Multi-modal Instruction Dataset - это набор данных, состоящ
 </div>
 
 📄 <a href="https://arxiv.org/pdf/2306.05425" style="color: black; text-decoration: bold;"> Статья </a>    
-🗃️ <a href="https://github.com/Luodian/Otter/tree/main/mimic-it" style="color: black; text-decoration: bold"> Датасет </a> 
+🗃️ <a href="https://github.com/Luodian/Otter/tree/main/mimic-it" style="color: black; text-decoration: bold"> Датасет </a>
 
 ## Мультимодальные диалоговые датасеты
 
@@ -286,6 +291,5 @@ Image-Chat - это набор данных, состоящий из корот�
 далее двух разметчиков просили составить обсуждение к изображению с учетом выданных им черт характера (интентов). 
 
 📄 <a href="https://aclanthology.org/2020.acl-main.219.pdf" style="color: black; text-decoration: bold;"> Статья </a>    
-🗃️ <a href="https://parl.ai/projects/image_chat/" style="color: black; text-decoration: bold"> Датасет </a> 
-
+🗃️ <a href="https://parl.ai/projects/image_chat/" style="color: black; text-decoration: bold"> Датасет </a>
 
