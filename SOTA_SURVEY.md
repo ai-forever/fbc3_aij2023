@@ -17,7 +17,7 @@
 Поэтому, в качестве идейного вдохновения для создания модели умного мультимодального Ассистента мы предлагаем 
 участникам ознакомиться с собранной нами подборкой SOTA мультимодальных архитектур 
 на основе больших языковых моделей (Multimodal Large Language Models, MLLMs) за последний 2023 год.
-С более ранними обзорами за 2021 и 2022 годы можно ознакомиться по ссылкам: Survey MLLM 2021 и Survey MLLM 2022.
+С более ранними обзорами за 2021 и 2022 годы можно ознакомиться по ссылкам: [Survey MLLM 2021](https://github.com/ai-forever/fusion_brain_aij2021/blob/main/Papers%20on%20multitask%20%26%20multimodal%20models.md) и [Survey MLLM 2022](https://github.com/ai-forever/fbc2_aij2022/blob/main/Papers%20on%20multitask%20%26%20multimodal%20models.md).
 
 
 ## Surveys
@@ -46,7 +46,7 @@
 10. [ImageBind: One Embedding Space To Bind Them All](https://arxiv.org/abs/2305.05665) (```Girdhar et. al., 31 May 2023```)
 
 <div align="center">
-<img src="./assets/imagebind-1.PNG" alt="ImageBind"> 
+<img src="./assets/imagebind-1.PNG" alt="ImageBind" width="70%"> 
 </div>
 
 Основная идея ImageBind заключается в создании общего пространства векторных представлений (эмбеддингов) 
@@ -70,7 +70,7 @@ $$L_{I,M} = -log\frac{-exp(q_{i}^{T}k_{i}/\tau )}{exp(q_{i}^{T}k_{i}/\tau) + \su
 ассоциации между парой модальностей, без использования в обучении специального обучающего датасета для нее.
 
 <div align="center">
-<img src="./assets/imagebind-2.PNG" alt="ImageBind"> 
+<img src="./assets/imagebind-2.PNG" alt="ImageBind" width="70%"> 
 </div>
 
 В общем итоге, авторы создали объединяющее векторное пространство для шести разных модальностей, помимо визуальной: 
