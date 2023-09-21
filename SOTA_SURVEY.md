@@ -43,10 +43,13 @@
 7. [LLaMA-Adapter V2: Parameter-Efficient Visual Instruction Model](https://arxiv.org/abs/2304.15010) (```Gao et. al., 28 April 2023```)
 8. [Otter: A Multi-Modal Model with In-Context Instruction Tuning](https://arxiv.org/abs/2305.03726) (```Li et. al., 5 May 2023```)
 9. [ONE-PEACE: Exploring One General Representation Model Toward Unlimited Modalities](https://arxiv.org/abs/2305.11172) (```Wang et. al., 18 May 2023```)
-10. [GILL: Generating Images with Multimodal Language Models](https://arxiv.org/abs/2305.17216) (```Jing Yu Koh, Daniel Fried, Ruslan Salakhutdinov, 26 May 2023```)
-11. [ImageBind: One Embedding Space To Bind Them All](https://arxiv.org/abs/2305.05665) (```Girdhar et. al., 31 May 2023```)
+10. [ImageBind: One Embedding Space To Bind Them All](https://arxiv.org/abs/2305.05665) (```Girdhar et. al., 31 May 2023```)
 
-Основополагающая идея ImageBind заключается в создании общего пространства векторных представлений (эмбеддингов) 
+<div align="center">
+<img src="./assets/imagebind-1.PNG" alt="ImageBind"> 
+</div>
+
+Основная идея ImageBind заключается в создании общего пространства векторных представлений (эмбеддингов) 
 для всех типов модальностей используя их связь с изображениями, то есть с визуальной модальностью. 
 Например, связь между парой “текст-изображения” основывается на данных из веб-страниц, откуда извлекались картинки 
 и соответствующие им описания; а для пары сигналов “аудио-видео/изображения” связь может быть построена по кадрам 
@@ -55,14 +58,20 @@
 Для реализации этой идеи авторы статьи используют контрастивное обучение (а именно InfoNCE loss) на каждой паре модальностей 
 ($I$, $M$): визуальной ($M$) и любой иной ($I$), которую необходимо отразить в общем пространстве представлений. 
 При этом, каждая модальность, изначально, обрабатывается соответствующим предобученным энкодером 
-(который, однако, в процессе обучения так же обновляет свои параметры): $$q_i = f(I_i)$$ and $$k_i = g(M_i)$$, 
+(который, однако, в процессе обучения так же обновляет свои параметры): $$q_i = f(I_i)$$ and $$k_i = g(M_i)$$
 где $f$, $g$ - это энкодеры на базе архитектуры ViT (Vision Transformer). 
 
 Затем, рассчитывается контрастивная функция потерь - InfoNCE loss, которая стремится сблизить полученные эмбеддинги 
 модальностей в общем пространстве представлений, таким образом связывая визуальную M и иную модальность I:
 
+$$L_{I,M} = -log\frac{-exp(q_{i}^{T}k_{i}/\tau )}{exp(q_{i}^{T}k_{i}/\tau) + \sum_{j\neq i}exp(q_{i}^{T}k_{j}/\tau) }$$
+
 Таким образом обученное векторное пространство представлений обладает крайне полезным свойством zero-shot 
 ассоциации между парой модальностей, без использования в обучении специального обучающего датасета для нее.
+
+<div align="center">
+<img src="./assets/imagebind-2.PNG" alt="ImageBind"> 
+</div>
 
 В общем итоге, авторы создали объединяющее векторное пространство для шести разных модальностей, помимо визуальной: 
 текстовой, аудио, карт глубины, сигналов IMU, записей с эгоцентрических камер и термальных карт.
@@ -71,10 +80,10 @@ ImageBind использует в обучении четыре типа дат�
 видео/изображения-IMU (Ego4D dataset).
 
 
-12. [InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning](https://arxiv.org/abs/2305.06500) (```Dai et. al., 15 June 2023```)
-13. [BuboGPT: Enabling Visual Grounding in Multi-Modal LLMs](https://arxiv.org/abs/2307.08581) (```Zhao et. al., 17 July 2023```)
-14. [IDEFICS & OBELICS: An Open Web-Scale Filtered Dataset of Interleaved Image-Text Documents](https://arxiv.org/abs/2306.16527) (```Laurencon et. al., 21 August 2023```)
-15. [ImageBind-LLM: Multi-modality Instruction Tuning](https://arxiv.org/abs/2309.08637) (```Li et. al., 7 September 2023```)
-16. [TextBind: Multi-turn Interleaved Multimodal Instruction-following in the Wild](https://arxiv.org/abs/2309.03905) (```Han et. al., 14 September 2023```)
+11. [InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning](https://arxiv.org/abs/2305.06500) (```Dai et. al., 15 June 2023```)
+12. [BuboGPT: Enabling Visual Grounding in Multi-Modal LLMs](https://arxiv.org/abs/2307.08581) (```Zhao et. al., 17 July 2023```)
+13. [IDEFICS & OBELICS: An Open Web-Scale Filtered Dataset of Interleaved Image-Text Documents](https://arxiv.org/abs/2306.16527) (```Laurencon et. al., 21 August 2023```)
+14. [ImageBind-LLM: Multi-modality Instruction Tuning](https://arxiv.org/abs/2309.08637) (```Li et. al., 7 September 2023```)
+15. [TextBind: Multi-turn Interleaved Multimodal Instruction-following in the Wild](https://arxiv.org/abs/2309.03905) (```Han et. al., 14 September 2023```)
 
 
