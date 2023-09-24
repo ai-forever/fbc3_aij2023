@@ -40,7 +40,7 @@
 4. [MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models](#MiniGPT-4)
 5. [LLaVA: Visual Instruction Tuning](#LLaVA)
 6. [LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention](#LLaMA-Adapter)
-7. [LLaMA-Adapter V2: Parameter-Efficient Visual Instruction Model](#LLaMA-Adapter V2)
+7. [LLaMA-Adapter V2: Parameter-Efficient Visual Instruction Model](#LLaMA-Adapter-V2)
 8. [Otter: A Multi-Modal Model with In-Context Instruction Tuning](#Otter)
 9. [ONE-PEACE: Exploring One General Representation Model Toward Unlimited Modalities](#ONE-PEACE)
 10. [ImageBind: One Embedding Space To Bind Them All](#ImageBind)
