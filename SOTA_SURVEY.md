@@ -36,6 +36,20 @@
 
 1. [BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models](#BLIP-2)
 2. [FROMAGe: Grounding Language Models to Images for Multimodal Inputs and Outputs](#FROMAGe)
+3. [Kosmos-1: Language Is Not All You Need Aligning Perception with Language Models](#Kosmos-1)
+4. [MiniGPT-4: Enhancing Vision-Language Understanding with Advanced Large Language Models](#MiniGPT-4)
+5. [LLaVA: Visual Instruction Tuning](#LLaVA)
+6. [LLaMA-Adapter: Efficient Fine-tuning of Language Models with Zero-init Attention](#LLaMA-Adapter)
+7. [LLaMA-Adapter V2: Parameter-Efficient Visual Instruction Model](#LLaMA-Adapter V2)
+8. [Otter: A Multi-Modal Model with In-Context Instruction Tuning](#Otter)
+9. [ONE-PEACE: Exploring One General Representation Model Toward Unlimited Modalities](#ONE-PEACE)
+10. [ImageBind: One Embedding Space To Bind Them All](#ImageBind)
+11. [MultiModal-GPT: A Vision and Language Model for Dialogue with Humans](#MultiModal-GPT)
+12. [InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning](#InstructBLIP)
+13. [BuboGPT: Enabling Visual Grounding in Multi-Modal LLMs](#BuboGPT)
+14. [IDEFICS & OBELICS: An Open Web-Scale Filtered Dataset of Interleaved Image-Text Documents](#IDEFICS)
+15. [[ImageBind-LLM: Multi-modality Instruction Tuning](#ImageBind-LLM)
+
 
 **[BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models](https://arxiv.org/abs/2301.12597)** (```Junnan Li, Dongxu Li, Silvio Savarese, Steven Hoi, 30 January 2023```) <a name="BLIP-2"></a>
 
@@ -144,7 +158,7 @@ Captions), состоящие из пар изображение-текстов�
 Как разультат, особенностью этой архитектуры является крайне скромная ресурсоемкость обучения: для языковой модели  LLaMA с 7 млрд. параметров приходится всего лишь 1,2 млн. обучаемых параметров, на что уходит менее одного часа fine-tuning-а на 8 GPUs A100.
 
 <div align="center">
-<img src="./assets/llama-adapter-1-1.png" alt="LLaMA-Adapter" width="70%"> 
+<img src="./assets/llama-adapter-1-1.png" alt="LLaMA-Adapter" width="50%"> 
 </div>
 
 Для реализации этого, авторы статьи предлагают два аспекта:
@@ -174,12 +188,12 @@ Captions), состоящие из пар изображение-текстов�
 **LLaMA-Adapter V2** - это прямое идейное развитие предыдущего подхода LLaMA-Adapter, в котором авторы предложили решение проблемы доминирования визуальной составляющей в мультимодальных инструктивных задачах.
 
 <div align="center">
-<img src="./assets/llama-adapter-2-1.png" alt="LLaMA-Adapter" width="70%"> 
+<img src="./assets/llama-adapter-2-1.png" alt="LLaMA-Adapter" width="35%"> 
 </div>
 
 Чтобы сбалансировать вклад визуальной и текстовой модальностей во второй версии LLaMA-Adapter принимается решение разделить адаптеры на те, что отвечают за инструктивные способности модели и те, задачей которых становится адаптация LLM к новой модальности. Располагаются эти два вида обучаемых префиксов в разных слоях трансформера. 
 <div align="center">
-<img src="./assets/llama-adapter-2-3.png" alt="LLaMA-Adapter" width="50%"> 
+<img src="./assets/llama-adapter-2-3.png" alt="LLaMA-Adapter" width="40%"> 
 </div>
 * Для обработки визуальных данных применяется подход early fusion, в результате которого адапторные префиксы добавляются только к $К$ первых слоев модели, причем $K < N$, где $N$ - общее число слоев LLM.
 * Адаптерные префиксы, отвечающие за инструктивное обучение, все также добавляются в L верхних слоев трансформера, причем L<N.
@@ -232,10 +246,10 @@ ImageBind использует в обучении четыре типа дат�
 (SUN RGB-D dataset), видео/изображения-аудио (Audioset dataset), изображения-термальные карты (LLVIP dataset) и 
 видео/изображения-IMU (Ego4D dataset).
 
-**[MultiModal-GPT: A Vision and Language Model for Dialogue with Humans](https://arxiv.org/abs/2305.04790)** (```Gong et. al., 13 June 2023```) <a name="ImageBind"></a> <br>
-**[InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning](https://arxiv.org/abs/2305.06500)** (```Dai et. al., 15 June 2023```) <a name="ImageBind"></a> <br>
-**[BuboGPT: Enabling Visual Grounding in Multi-Modal LLMs](https://arxiv.org/abs/2307.08581) (```Zhao et. al., 17 July 2023```)** <a name="ImageBind"></a> <br>
-**[IDEFICS & OBELICS: An Open Web-Scale Filtered Dataset of Interleaved Image-Text Documents](https://arxiv.org/abs/2306.16527)** (```Laurencon et. al., 21 August 2023```) <a name="ImageBind"></a> <br>
-**[ImageBind-LLM: Multi-modality Instruction Tuning](https://arxiv.org/abs/2309.08637)** (```Li et. al., 7 September 2023```) <a name="ImageBind"></a> <br>
+**[MultiModal-GPT: A Vision and Language Model for Dialogue with Humans](https://arxiv.org/abs/2305.04790)** (```Gong et. al., 13 June 2023```) <a name="MultiModal-GPT"></a> <br>
+**[InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning](https://arxiv.org/abs/2305.06500)** (```Dai et. al., 15 June 2023```) <a name="InstructBLIP"></a> <br>
+**[BuboGPT: Enabling Visual Grounding in Multi-Modal LLMs](https://arxiv.org/abs/2307.08581) (```Zhao et. al., 17 July 2023```)** <a name="BuboGPT"></a> <br>
+**[IDEFICS & OBELICS: An Open Web-Scale Filtered Dataset of Interleaved Image-Text Documents](https://arxiv.org/abs/2306.16527)** (```Laurencon et. al., 21 August 2023```) <a name="IDEFICS"></a> <br>
+**[ImageBind-LLM: Multi-modality Instruction Tuning](https://arxiv.org/abs/2309.08637)** (```Li et. al., 7 September 2023```) <a name="ImageBind-LLM"></a> <br>
 
 
