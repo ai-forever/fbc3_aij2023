@@ -20,3 +20,5 @@
 pip install requirements.txt
 ```
 нужно запустить все ячейки в [ноутбуке](./baseline.ipynb).
+
+**NB!** Веса в этом репозитории соответсвуют гиперпараметру `N_MODALITY_EMBS = 4`. Веса с `N_MODALITY_EMBS = 32` можно найти на нашем [huggingface](https://huggingface.co/ai-forever/fbc3_baseline).
